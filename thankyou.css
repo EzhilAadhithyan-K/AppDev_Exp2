@@ -1,0 +1,79 @@
+/* Full-screen background with a soft gradient */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #b2ebf2 0%, #e0f7fa 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Container for the thank you message and animation */
+.thank-you-container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style for the heading */
+h1 {
+    font-size: 36px;
+    color: #00796b;
+    margin: 20px 0;
+}
+
+/* Style for the paragraph */
+p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Checkmark animation circle */
+.checkmark-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    animation: circleScale 0.6s ease-in-out infinite; /* Infinite loop */
+}
+
+/* Checkmark within the circle */
+.checkmark {
+    width: 45px;
+    height: 25px;
+    border-left: 6px solid white;
+    border-bottom: 6px solid white;
+    transform: rotate(-45deg);
+    align-items: center;
+}
+
+/* Animation for the checkmark */
+@keyframes checkmarkDraw {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    50% {
+        width: 45px;
+        height: 25px;
+    }
+    100% {
+        width: 0;
+        height: 0;
+    }
+}
+
+/* Animation for scaling the circle */
+@keyframes circleScale {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Visit Details Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Industrial Visit Details Form</h2>
+        <form id="visitDetailsForm" action="thankyou.html" method="POST">
+            <div class="form-group">
+                <label for="name">Student Name</label>
+                <input type="text" id="name" name="name" minlength="3"  pattern="[A-Za-z\s]+" title="Name should only contain letters and spaces.">
+            </div>
+
+            <div class="form-group">
+                <label for="regno">Registration Number</label>
+                <input type="text" id="regno" name="regno" minlength="12" maxlength="12" pattern="\d+" title="Registration number should only contain digits.">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" minlength="10" maxlength="10" required pattern="\d{10}" title="Phone number should be 10 digits long.">
+            </div>
+
+            <div class="form-group">
+                <label for="Email">Email ID</label>
+                <input type="email" id="Email" name="Email" required title="Please enter a valid email address.">
+            </div>
+            
+            <div class="form-group">
+                <label for="fatherName">Father's Name</label>
+                <input type="text" id="fatherName" name="fatherName" required pattern="[A-Za-z\s]+" title="Father's name should only contain letters and spaces.">
+            </div>
+
+            <div class="form-group">
+                <label for="fatherPhone">Father's Phone Number</label>
+                <input type="tel" id="fatherPhone" name="fatherPhone" minlength="10" maxlength="10" required pattern="\d{10}" title="Phone number should be 10 digits long.">
+            </div>
+
+            <div class="form-group">
+                <label for="motherName">Mother's Name</label>
+                <input type="text" id="motherName" name="motherName"  required pattern="[A-Za-z\s]+" title="Mother's name should only contain letters and spaces.">
+            </div>
+
+            <div class="form-group">
+                <label for="motherPhone">Mother's Phone Number</label>
+                <input type="tel" id="motherPhone" name="motherPhone" minlength="10" maxlength="10" required pattern="\d{10}" title="Phone number should be 10 digits long.">
+            </div>
+
+            <div class="form-group">
+                <label for="accommodation">Mode of Transport</label>
+                <select id="accommodation" name="accommodation" required>
+                    <option value="">Select</option>
+                    <option value="hosteller">Hosteller</option>
+                    <option value="dayscholar">Day Scholar</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="districtGroup" style="display: none;">
+                <label for="district">District</label>
+                <input type="text" id="district" name="district" pattern="[A-Za-z\s]+" title="District should only contain letters and spaces.">
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const accommodationSelect = document.getElementById('accommodation');
+        const districtGroup = document.getElementById('districtGroup');
+
+        accommodationSelect.addEventListener('change', function() {
+            if (this.value === 'dayscholar') {
+                districtGroup.style.display = 'block';
+                document.getElementById('district').required = true;
+            } else {
+                districtGroup.style.display = 'none';
+                document.getElementById('district').required = false;
+            }
+        });
+    </script>
+</body>
+</html>

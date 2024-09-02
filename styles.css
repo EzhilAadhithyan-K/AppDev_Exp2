@@ -1,0 +1,96 @@
+/* Soft gradient background with a calming effect */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #e0f7fa 0%, #b2ebf2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+    margin-top: 80px;
+}
+
+/* Form container with a clean, soft background and subtle shadow */
+.form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Form header with a calm blue color */
+h2 {
+    margin-bottom: 30px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #00796b;
+}
+
+/* Styling each form group with proper spacing and alignment */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    margin-right: 30px;
+
+}
+
+/* Labels with a soft grey tone and clean font */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Input fields with soft borders and light background */
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+    
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus state with a soft blue border and subtle shadow */
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #00796b;
+    box-shadow: 0 0 8px rgba(0, 121, 107, 0.2);
+    outline: none;
+}
+
+/* Submit button with a calming blue background and rounded corners */
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #00796b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the submit button with a slightly darker shade */
+button[type="submit"]:hover {
+    background-color: #004d40;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* District field remains hidden unless Day Scholar is selected */
+#districtGroup {
+    display: none;
+}
